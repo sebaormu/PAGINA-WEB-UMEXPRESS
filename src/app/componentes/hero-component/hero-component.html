@@ -1,0 +1,44 @@
+<section class="hero">
+
+  <!-- SLIDER -->
+  <div class="hero-slider" [style.transform]="'translateY(' + parallaxY + 'px)'">
+    @for (slide of slides; track $index) {
+      <div class="hero-slide"
+           [class.active]="$index === current"
+           [style.background-image]="'url(' + slide.image + ')'"
+           [attr.aria-label]="slide.alt">
+      </div>
+    }
+  </div>
+
+  <!-- BARRA DE PROGRESO -->
+  <div class="slider-progress" [style.width.%]="progressPct"></div>
+  <!-- DOTS -->
+  <div class="hero-dots">
+    @for (slide of slides; track $index) {
+      <button class="hero-dot"
+              [class.active]="$index === current"
+              (click)="goTo($index)"
+              [attr.aria-label]="'Ir al slide ' + ($index + 1)">
+      </button>
+    }
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="hero-content">
+    <div class="hero-headline-wrap">
+      <div class="hero-tag"></div>
+      <h1 class="hero-headline">
+        Agilidad e innovación en el mismo lugar
+      </h1>
+    </div>
+    <p class="hero-subtext">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit..
+    </p>
+    <!--<div class="hero-actions">
+      <a routerLink="/contacto" class="btn-primary">Get Started</a>
+      <a routerLink="/servicios" class="btn-outline">Learn More</a>
+    </div>-->
+  </div>
+
+</section>

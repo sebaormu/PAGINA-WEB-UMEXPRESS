@@ -1,0 +1,41 @@
+<!-- NAVBAR -->
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar-container">
+    <a routerLink="/" class="nav-logo">
+      @if (!isScrolled) {
+        <img src="logo-blanco.png" />
+      }
+      @if (isScrolled) {
+        <img src="logo-origina.png" />
+      }
+    </a>
+
+    <ul class="nav-links">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Inicio</a></li>
+      <li><a routerLink="/nosotros" routerLinkActive="active">Sobre nosotros</a></li>
+      <li><a routerLink="/noticias" routerLinkActive="active">Noticias</a></li>
+      <li><a routerLink="/servicios" routerLinkActive="active">Servicios <span class="dropdown-arrow">▾</span></a></li>
+      <li><a routerLink="/paginas" routerLinkActive="active">Páginas <span class="dropdown-arrow">▾</span></a></li>
+      <li><a routerLink="/equipo" routerLinkActive="active">Equipo</a></li>
+      <li> <a routerLink="/contacto" class="btn-contact">Contáctanos</a></li>
+    </ul>
+    <!-- Hamburger -->
+    <button class="hamburger" (click)="toggleMobile()" aria-label="Menú" [class.is-open]="mobileOpen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" [class.open]="mobileOpen">
+  <button class="mobile-close" (click)="closeMobile()">✕</button>
+  <a routerLink="/" (click)="closeMobile()">Inicio</a>
+  <a routerLink="/nosotros" (click)="closeMobile()">Sobre nosotros</a>
+  <a routerLink="/noticias" (click)="closeMobile()">Noticias</a>
+  <a routerLink="/servicios" (click)="closeMobile()">Servicios</a>
+  <a routerLink="/paginas" (click)="closeMobile()">Páginas</a>
+  <a routerLink="/equipo" (click)="closeMobile()">Equipo</a>
+  <a routerLink="/contacto" (click)="closeMobile()" class="btn-contact" style="margin-top:12px">
+    Contáctanos
+  </a>
+</div>

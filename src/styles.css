@@ -1068,8 +1068,8 @@ body {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(0,0,0,0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.045) 1px, transparent 1px);
+        linear-gradient(rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
     background-size: 48px 48px;
     pointer-events: none;
 }
@@ -1111,7 +1111,7 @@ body {
 
 .client-card {
     background: #fff;
-    border: 1px solid rgba(0,0,0,0.07);
+    border: 1px solid rgba(0, 0, 0, 0.07);
     aspect-ratio: 16/9;
     display: flex;
     align-items: center;
@@ -1121,7 +1121,7 @@ body {
 }
 
 .client-card:hover {
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     z-index: 1;
 }
 
@@ -1207,14 +1207,14 @@ body {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.clients-eyebrow.visible { 
-    opacity: 1; 
-    transform: translateY(0); 
+.clients-eyebrow.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.clients-title.visible { 
-    opacity: 1; 
-    transform: translateY(0); 
+.clients-title.visible {
+    opacity: 1;
+    transform: translateY(0);
     transition-delay: 0.15s;
 }
 
@@ -1224,14 +1224,37 @@ body {
 }
 
 /* Delays escalonados para las cards */
-.client-card:nth-child(1).visible  { transition-delay: 0.05s; }
-.client-card:nth-child(2).visible  { transition-delay: 0.10s; }
-.client-card:nth-child(3).visible  { transition-delay: 0.15s; }
-.client-card:nth-child(4).visible  { transition-delay: 0.20s; }
-.client-card:nth-child(5).visible  { transition-delay: 0.25s; }
-.client-card:nth-child(6).visible  { transition-delay: 0.30s; }
-.client-card:nth-child(7).visible  { transition-delay: 0.35s; }
-.client-card:nth-child(8).visible  { transition-delay: 0.40s; }
+.client-card:nth-child(1).visible {
+    transition-delay: 0.05s;
+}
+
+.client-card:nth-child(2).visible {
+    transition-delay: 0.10s;
+}
+
+.client-card:nth-child(3).visible {
+    transition-delay: 0.15s;
+}
+
+.client-card:nth-child(4).visible {
+    transition-delay: 0.20s;
+}
+
+.client-card:nth-child(5).visible {
+    transition-delay: 0.25s;
+}
+
+.client-card:nth-child(6).visible {
+    transition-delay: 0.30s;
+}
+
+.client-card:nth-child(7).visible {
+    transition-delay: 0.35s;
+}
+
+.client-card:nth-child(8).visible {
+    transition-delay: 0.40s;
+}
 
 /* ── HOVER PROFESIONAL ────────────────────────── */
 .client-card {
@@ -1265,12 +1288,10 @@ body {
     left: -80%;
     width: 50%;
     height: 200%;
-    background: linear-gradient(
-        105deg,
-        transparent 40%,
-        rgba(255,255,255,0.55) 50%,
-        transparent 60%
-    );
+    background: linear-gradient(105deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.55) 50%,
+            transparent 60%);
     transform: skewX(-15deg);
     transition: left 0.55s ease;
     pointer-events: none;
@@ -1289,12 +1310,259 @@ body {
 
 .client-name {
     transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* necesario para que scale funcione */
+    display: inline-block;
+    /* necesario para que scale funcione */
 }
 
 /* Sombra elevada en hover */
 .client-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
     z-index: 2;
     background: #fafafa;
+}
+
+.testimonios-section {
+    background: #F2F2F5;
+    padding: 90px 60px;
+}
+
+.ts-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Imagen */
+.ts-img-side {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.ts-img-side img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.ts-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(91, 63, 232, 0.18) 0%, rgba(232, 68, 28, 0.12) 100%);
+}
+
+.ts-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.ts-badge-num {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    background-color: red;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.ts-badge-txt {
+    font-size: 25px;
+    color: #313131;
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Derecha */
+.ts-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ts-eyebrow {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.ts-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    color: #0F0E1A;
+    line-height: 1.25;
+}
+
+/* Cards */
+.ts-card-wrap {
+    position: relative;
+    min-height: 220px;
+}
+
+.ts-card {
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    animation: fadeSlide 0.45s ease;
+}
+
+.ts-card.active {
+    display: flex;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ts-stars {
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+.ts-quote {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: #444;
+    padding-left: 16px;
+    border-left: 3px solid var(--gold);
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.ts-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.ts-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+}
+
+.ts-name {
+    font-weight: 500;
+    font-size: 0.88rem;
+    color: #0F0E1A;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.ts-role {
+    font-size: 0.78rem;
+    color: #888;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navegación */
+.ts-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ts-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0, 0, 0, 0.15);
+    background: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ts-btn:hover {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+    transform: scale(1.08);
+}
+
+.ts-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ts-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+}
+
+.ts-dot.active {
+    background: var(--gold);
+    width: 20px;
+    border-radius: 3px;
+}
+
+.ts-counter {
+    margin-left: auto;
+    font-size: 0.82rem;
+    color: #999;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+    .ts-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .ts-img-side {
+        display: none;
+        /* o muestra una versión reducida */
+    }
+
+    .testimonios-section {
+        padding: 60px 24px;
+    }
 }

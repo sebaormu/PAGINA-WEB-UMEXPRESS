@@ -4,5 +4,5 @@ import { NosotrosComponent } from './componentes/nosotros-component/nosotros-com
 
 export const routes: Routes = [
     { path: '', component: InicioComponent},
-    { path: 'sobre-nosotros', component: NosotrosComponent}
+    { path: '/sobre-nosotros', component: NosotrosComponent}
 ];

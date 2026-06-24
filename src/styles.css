@@ -70,7 +70,6 @@ body {
     height: 100px;
 }
 
-
 .navbar.scrolled .nav-links a {
     color: rgb(70, 70, 70);
 }
@@ -224,7 +223,11 @@ body {
     height: 2px;
     background: var(--white);
     border-radius: 2px;
-    transition: all 0.3s;
+    transition: background 0.3s ease;
+}
+
+.navbar.scrolled .hamburger span {
+    background: #424242;
 }
 
 /* ── HERO ─────────────────────────────────────── */

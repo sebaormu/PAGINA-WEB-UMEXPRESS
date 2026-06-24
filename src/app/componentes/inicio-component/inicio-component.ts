@@ -12,32 +12,47 @@ import { FooterComponent } from '../footer-component/footer-component';
 export class InicioComponent implements AfterViewInit, OnDestroy {
   private observer!: IntersectionObserver;
   testimonios = [
-  {
-    texto: 'El equipo superó todas nuestras expectativas. La velocidad de entrega y calidad fue impresionante.',
-    nombre: 'Carlos Mendoza', cargo: 'CEO · Craft Studio',
-    iniciales: 'CM', avatarBg: '#EEEDFE', avatarColor: '#3C3489'
-  },
-  {
-    texto: 'Nunca habíamos trabajado con una agencia tan comprometida. Soluciones simples a problemas complejos.',
-    nombre: 'Laura Rodríguez', cargo: 'Directora · Haus Group',
-    iniciales: 'LR', avatarBg: '#E1F5EE', avatarColor: '#085041'
-  },
-  {
-    texto: 'La transformación digital fue posible gracias a su acompañamiento. Resultados desde la primera semana.',
-    nombre: 'Andrés Peña', cargo: 'CTO · PowerXR Module',
-    iniciales: 'AP', avatarBg: '#FAEEDA', avatarColor: '#633806'
-  },
-  {
-    texto: 'Comunicación clara, tiempos cumplidos y resultado que superó lo que teníamos en mente.',
-    nombre: 'Sofía Vargas', cargo: 'Fundadora · Hype Brand',
-    iniciales: 'SV', avatarBg: '#FBEAF0', avatarColor: '#72243E'
-  },
-  {
-    texto: 'El nivel de profesionalismo fue algo que no esperábamos. La mejor inversión del año.',
-    nombre: 'Jorge Mora', cargo: 'Gerente · Minimum Co.',
-    iniciales: 'JM', avatarBg: '#E6F1FB', avatarColor: '#0C447C'
-  },
-];
+    {
+      texto: 'Envié mercancía desde Bogotá hasta Pitalito y llegó en perfectas condiciones al día siguiente. Nunca había tenido una experiencia tan rápida y segura con mis encomiendas.',
+      nombre: 'María Fernanda Ríos',
+      cargo: 'Comerciante · Bogotá',
+      iniciales: 'MR',
+      avatarBg: '#EEEDFE',
+      avatarColor: '#3C3489'
+    },
+    {
+      texto: 'Manejo mi tienda online y necesito envíos confiables cada semana. Desde que los uso, ningún cliente se ha quejado por demoras ni paquetes dañados. Son mi aliado número uno.',
+      nombre: 'Carlos Andrade',
+      cargo: 'Emprendedor · Neiva',
+      iniciales: 'CA',
+      avatarBg: '#E1F5EE',
+      avatarColor: '#085041'
+    },
+    {
+      texto: 'Envié documentos urgentes y me garantizaron la entrega en menos de 24 horas. Cumplieron al pie de la letra. El rastreo en tiempo real me dio mucha tranquilidad.',
+      nombre: 'Lucía Ospina',
+      cargo: 'Abogada · Cali',
+      iniciales: 'LO',
+      avatarBg: '#FAEEDA',
+      avatarColor: '#633806'
+    },
+    {
+      texto: 'Tengo un negocio de ropa y envío pedidos a todo el Huila. El servicio es puntual, el precio es justo y el trato al cliente es excelente. No cambiaría a nadie más.',
+      nombre: 'Juliana Torres',
+      cargo: 'Diseñadora de modas · Garzón',
+      iniciales: 'JT',
+      avatarBg: '#FBEAF0',
+      avatarColor: '#72243E'
+    },
+    {
+      texto: 'Llevo más de dos años usando su servicio para mis envíos de electrodomésticos. Siempre llegan bien empacados y sin ningún contratiempo. Total confianza.',
+      nombre: 'Hernán Díaz',
+      cargo: 'Distribuidor · Florencia',
+      iniciales: 'HD',
+      avatarBg: '#E6F1FB',
+      avatarColor: '#0C447C'
+    },
+  ];
 
   current = 0;
   cardWidth = 296;

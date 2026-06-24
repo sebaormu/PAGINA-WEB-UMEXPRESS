@@ -70,8 +70,13 @@ body {
     height: 100px;
 }
 
+
 .navbar.scrolled .nav-links a {
     color: rgb(70, 70, 70);
+}
+
+.navbar.scrolled .nav-links a.active {
+    color: #e8441c;
 }
 
 .navbar.scrolled .nav-links .btn-contact {
@@ -125,7 +130,7 @@ body {
 
 
 .nav-links a.active {
-    color: var(--gold);
+    color: #e8441c;
     font-weight: 600;
 }
 

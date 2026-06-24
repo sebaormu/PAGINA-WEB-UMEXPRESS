@@ -66,7 +66,7 @@ export class InicioComponent implements AfterViewInit, OnDestroy {
 
   startAuto() {
     clearInterval(this.timer);
-    this.timer = setInterval(() => this.next(), 4000);
+    this.timer = setInterval(() => this.next(), 10000);
   }
 
   ngAfterViewInit(): void {

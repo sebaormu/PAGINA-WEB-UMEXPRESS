@@ -11,7 +11,7 @@ export interface Slide {
   styleUrl: './hero-component.css',
 })
 export class HeroComponent implements OnInit, OnDestroy{
-  readonly DURATION = 10000; // ms por slide
+  readonly DURATION = 6000; // ms por slide
 
   slides: Slide[] = [
     {
